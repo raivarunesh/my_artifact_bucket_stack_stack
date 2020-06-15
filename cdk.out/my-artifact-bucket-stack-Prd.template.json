@@ -7,7 +7,8 @@
           "ServerSideEncryptionConfiguration": [
             {
               "ServerSideEncryptionByDefault": {
-                "SSEAlgorithm": "AES256"
+                "KMSMasterKeyID": "arn:aws:kms:ap-southeast-2:880496541732:key/a1ed4137-c5b3-4374-9823-a4428457786a",
+                "SSEAlgorithm": "aws:kms"
               }
             }
           ]

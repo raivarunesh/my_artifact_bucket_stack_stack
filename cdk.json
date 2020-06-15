@@ -1,7 +1,21 @@
 {
   "app": "python3 app.py",
+  "versionReporting": false,
   "context": {
     "@aws-cdk/core:enableStackNameDuplicates": "true",
-    "aws-cdk:enableDiffNoFail": "true"
+    "aws-cdk:enableDiffNoFail": "true",
+    "uat": {
+      "region":"ap-southeast-2",
+      "account":"264444055481"
+    },
+    "prd": {
+      "region":"ap-southeast-2",
+      "account":"880496541732",
+      "encryption": true,
+      "kms_arn": "arn:aws:kms:ap-southeast-2:880496541732:key/a1ed4137-c5b3-4374-9823-a4428457786a",
+      "vpc_cidr":"10.83.0.0"
+
+    }
   }
 }
+

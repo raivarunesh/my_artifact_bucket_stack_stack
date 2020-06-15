@@ -4,10 +4,12 @@ from aws_cdk import core
 
 from my_artifact_bucket_stack.my_artifact_bucket_stack_stack import MyArtifactBucketStackStack
 
-env_uat = core.Environment(account="264444055481", region="ap-southeast-2")
-env_prd = core.Environment(account="880496541732", region="ap-southeast-2")
-
 app = core.App()
+
+env_uat = core.Environment(account=app.node.try_get_context('uat')['account'],
+                           region=app.node.try_get_context('uat')['region'])
+env_prd = core.Environment(account=app.node.try_get_context('prd')['account'],
+                             region=app.node.try_get_context('prd')['region'])
 
 MyArtifactBucketStackStack(app, "my-artifact-bucket-stack-Uat", env=env_uat)
 MyArtifactBucketStackStack(app, "my-artifact-bucket-stack-Prd",is_prod=True, env=env_prd)
