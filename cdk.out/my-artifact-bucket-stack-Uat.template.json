@@ -1,0 +1,12 @@
+{
+  "Resources": {
+    "muDevArtifactBucketId02C7CEBB": {
+      "Type": "AWS::S3::Bucket",
+      "UpdateReplacePolicy": "Delete",
+      "DeletionPolicy": "Delete",
+      "Metadata": {
+        "aws:cdk:path": "my-artifact-bucket-stack-Uat/muDevArtifactBucketId/Resource"
+      }
+    }
+  }
+}
